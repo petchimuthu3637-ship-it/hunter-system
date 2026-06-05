@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Hunter System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-brand">⚔️ Hunter System</div>
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="navbar-menu" id="navbarMenu">
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="inventory.html">Inventory</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button class="btn btn-ghost btn-small" id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Dashboard Container -->
+  <div class="dashboard-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="#quests">Quests</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Toggle Sidebar Button (Mobile) -->
+      <button class="sidebar-toggle" id="sidebarToggle">☰ Menu</button>
+
+      <!-- Profile Card -->
+      <div class="profile-card">
+        <div class="profile-avatar" id="userAvatar">🐉</div>
+        <h2 class="profile-name" id="userName">Hunter Name</h2>
+        <p class="profile-rank" id="userRank">Rank: E-Class</p>
+        <p style="color: var(--text-secondary);">Joined on <span id="joinDate">Jan 1, 2026</span></p>
+      </div>
+
+      <!-- Statistics Section -->
+      <section style="margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1.5rem;">Your Statistics</h2>
+        <div class="dashboard-grid">
+          <!-- Level Card -->
+          <div class="stat-card card-elevated">
+            <div class="stat-label">Current Level</div>
+            <div class="stat-value" id="userLevel">1</div>
+            <p style="color: var(--text-secondary); margin-top: 1rem;">Experience: <span id="userXP">0</span> XP</p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="xpProgress" style="width: 0%"></div>
+            </div>
+            <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-top: 0.5rem;">
+              <span id="xpNeeded">100</span> XP to next level
+            </p>
+          </div>
+
+          <!-- Hunter Rank Card -->
+          <div class="stat-card card-elevated">
+            <div class="stat-label">Hunter Rank</div>
+            <div class="stat-value" id="hunterRankDisplay">E</div>
+            <p style="color: var(--text-secondary); margin-top: 1rem;">Rank Points: <span id="rankPoints">0</span></p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="rankProgress" style="width: 35%; background: linear-gradient(90deg, #10b981, #34d399);"></div>
+            </div>
+            <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-top: 0.5rem;">
+              <span id="pointsNeeded">750</span> points to D-Rank
+            </p>
+          </div>
+
+          <!-- Quests Completed Card -->
+          <div class="stat-card card-elevated">
+            <div class="stat-label">Quests Completed</div>
+            <div class="stat-value" id="questsCompleted">12</div>
+            <p style="color: var(--text-secondary); margin-top: 1rem;">This Week: <span id="weekQuests">3</span></p>
+            <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-top: 1rem;">Rewards Earned: <span id="rewardsEarned">2,450</span> Gold</p>
+          </div>
+
+          <!-- Achievements Card -->
+          <div class="stat-card card-elevated">
+            <div class="stat-label">Achievements</div>
+            <div class="stat-value" id="achievementCount">5</div>
+            <p style="color: var(--text-secondary); margin-top: 1rem;">Progress: <span id="achievementPercent">25</span>%</p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="achievementProgress" style="width: 25%; background: linear-gradient(90deg, #0ea5e9, #06b6d4);"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Active Quests Section -->
+      <section style="margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1.5rem;">Active Quests</h2>
+        <div class="dashboard-grid">
+          <!-- Quest Card 1 -->
+          <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+              <h3 style="margin: 0;">Defeat Dark Beasts</h3>
+              <span style="background: linear-gradient(135deg, #f59e0b, #fbbf24); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Hard</span>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Location: Dark Forest</p>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+              Progress: <span id="quest1Progress">45</span>/100
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="quest1Bar" style="width: 45%;"></div>
+            </div>
+            <button class="btn btn-primary btn-small" style="width: 100%; margin-top: 1rem;">Continue Quest</button>
+          </div>
+
+          <!-- Quest Card 2 -->
+          <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+              <h3 style="margin: 0;">Collect Rare Artifacts</h3>
+              <span style="background: linear-gradient(135deg, #7c3aed, #a78bfa); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Medium</span>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Location: Ancient Ruins</p>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+              Progress: <span id="quest2Progress">7</span>/15
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="quest2Bar" style="width: 47%;"></div>
+            </div>
+            <button class="btn btn-primary btn-small" style="width: 100%; margin-top: 1rem;">Continue Quest</button>
+          </div>
+
+          <!-- Quest Card 3 -->
+          <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+              <h3 style="margin: 0;">Train Your Skills</h3>
+              <span style="background: linear-gradient(135deg, #10b981, #34d399); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Easy</span>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Location: Training Ground</p>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+              Progress: <span id="quest3Progress">8</span>/10
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="quest3Bar" style="width: 80%; background: linear-gradient(90deg, #10b981, #34d399);"></div>
+            </div>
+            <button class="btn btn-primary btn-small" style="width: 100%; margin-top: 1rem;">Continue Quest</button>
+          </div>
+
+          <!-- New Quest Available -->
+          <div class="card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📜</div>
+            <h3 style="margin: 0; margin-bottom: 0.5rem;">New Quests Available</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Check the quest board for new adventures</p>
+            <button class="btn btn-secondary btn-small">Visit Quest Board</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Daily Rewards Section -->
+      <section style="margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1.5rem;">Daily Rewards</h2>
+        <div class="card" style="text-align: center;">
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Come back in <span id="dailyRewardCountdown">8 hours</span> to claim your next reward</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="background: rgba(124, 58, 237, 0.1); padding: 1rem; border-radius: 1rem; border: 2px solid #7c3aed;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💰</div>
+              <p style="font-size: 0.875rem; color: var(--text-tertiary);">500 Gold</p>
+            </div>
+            <div style="background: rgba(124, 58, 237, 0.1); padding: 1rem; border-radius: 1rem; border: 2px solid #7c3aed;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⭐</div>
+              <p style="font-size: 0.875rem; color: var(--text-tertiary);">50 XP</p>
+            </div>
+            <div style="background: rgba(124, 58, 237, 0.1); padding: 1rem; border-radius: 1rem; border: 2px solid #7c3aed;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎁</div>
+              <p style="font-size: 0.875rem; color: var(--text-tertiary);">Random Item</p>
+            </div>
+          </div>
+          <button class="btn btn-primary" disabled>Claim Next Reward</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Notification Container -->
+  <div id="notificationContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

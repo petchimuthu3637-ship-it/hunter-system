@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunter System - Quick Start Guide</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .guide-container {
+      max-width: 900px;
+      margin: 100px auto;
+      padding: 2rem;
+    }
+    .guide-section {
+      background: var(--glassmorphism-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glassmorphism-border);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .guide-section h2 {
+      margin-bottom: 1rem;
+      color: var(--primary-light);
+    }
+    .guide-section ol, .guide-section ul {
+      padding-left: 2rem;
+      color: var(--text-secondary);
+    }
+    .guide-section li {
+      margin-bottom: 1rem;
+    }
+    .code-block {
+      background: rgba(30, 41, 59, 0.8);
+      border-left: 3px solid var(--primary-color);
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      margin: 1rem 0;
+      color: #00ff00;
+    }
+    .feature-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .feature-item {
+      background: rgba(124, 58, 237, 0.1);
+      padding: 1rem;
+      border-radius: var(--radius-lg);
+      border-left: 3px solid var(--primary-color);
+    }
+    .btn-container {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="guide-container">
+    <h1 style="text-align: center; margin-bottom: 2rem;">🎮 Hunter System Quick Start Guide</h1>
+
+    <!-- Getting Started Section -->
+    <div class="guide-section">
+      <h2>🚀 Getting Started</h2>
+      <ol>
+        <li><strong>Open the project folder</strong> in your browser or VS Code</li>
+        <li><strong>Open index.html</strong> in your web browser (no server needed)</li>
+        <li><strong>You're ready to go!</strong> No installation required</li>
+      </ol>
+    </div>
+
+    <!-- File Structure Section -->
+    <div class="guide-section">
+      <h2>📁 Project Structure</h2>
+      <div class="code-block">
+project/<br>
+├── index.html          (Landing page)<br>
+├── login.html          (Login page)<br>
+├── register.html       (Registration)<br>
+├── dashboard.html      (Main dashboard)<br>
+├── inventory.html      (Inventory page)<br>
+├── leaderboard.html    (Leaderboard)<br>
+├── css/<br>
+│   └── style.css       (All styling)<br>
+├── js/<br>
+│   ├── app.js         (Core functionality)<br>
+│   ├── auth.js        (Authentication)<br>
+│   ├── dashboard.js   (Dashboard logic)<br>
+│   ├── inventory.js   (Inventory logic)<br>
+│   └── data.js        (Optional: Example data)<br>
+└── assets/            (Images and icons)<br>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="guide-section">
+      <h2>✨ Key Features</h2>
+      <div class="feature-list">
+        <div class="feature-item">📱 Fully Responsive Design</div>
+        <div class="feature-item">🔐 User Authentication</div>
+        <div class="feature-item">📊 Level & XP System</div>
+        <div class="feature-item">🏆 Rank Progression</div>
+        <div class="feature-item">🎯 Quest Tracking</div>
+        <div class="feature-item">💎 Inventory System</div>
+        <div class="feature-item">🌍 Global Leaderboard</div>
+        <div class="feature-item">💾 Local Storage Persistence</div>
+      </div>
+    </div>
+
+    <!-- First Time Setup Section -->
+    <div class="guide-section">
+      <h2>🎯 First Time Setup</h2>
+      <ol>
+        <li><strong>Go to Landing Page (index.html)</strong></li>
+        <li><strong>Click "Register"</strong> button</li>
+        <li><strong>Fill in Registration Form:</strong>
+          <ul style="margin: 0.5rem 0;">
+            <li>Hunter Name (3-20 characters)</li>
+            <li>Email Address (valid format)</li>
+            <li>Password (minimum 6 characters)</li>
+            <li>Confirm Password</li>
+            <li>Agree to Terms checkbox</li>
+          </ul>
+        </li>
+        <li><strong>Click "Create Hunter Account"</strong></li>
+        <li><strong>Automatically logged in to Dashboard</strong></li>
+      </ol>
+    </div>
+
+    <!-- Pages Overview Section -->
+    <div class="guide-section">
+      <h2>📖 Pages Overview</h2>
+      
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">1. Landing Page (index.html)</h3>
+      <p>Main landing page with hero section, features showcase, and call-to-action buttons.</p>
+      
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">2. Login Page (login.html)</h3>
+      <p>Login with email and password. Option to remember email for next time.</p>
+      
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">3. Registration Page (register.html)</h3>
+      <p>Create new hunter account with validation and terms agreement.</p>
+      
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">4. Dashboard (dashboard.html)</h3>
+      <p>Main hub showing profile, statistics, active quests, and daily rewards.</p>
+      
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">5. Inventory (inventory.html)</h3>
+      <p>Manage items with search and filter functionality. Equip items or use potions.</p>
+      
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">6. Leaderboard (leaderboard.html)</h3>
+      <p>View global rankings and compete with other hunters.</p>
+    </div>
+
+    <!-- Game Systems Section -->
+    <div class="guide-section">
+      <h2>🎮 Game Systems</h2>
+      
+      <h3 style="color: var(--primary-light); margin-top: 1rem;">Level System</h3>
+      <ul>
+        <li>Start at Level 1</li>
+        <li>Each level requires: Level × 100 XP</li>
+        <li>Earn XP by completing quests</li>
+        <li>Level up gives bonus XP</li>
+        <li>Max level: 150</li>
+      </ul>
+
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">Rank System</h3>
+      <ul>
+        <li><strong>E-Class:</strong> Beginner (0 points)</li>
+        <li><strong>D-Class:</strong> Intermediate (1000 points)</li>
+        <li><strong>C-Class:</strong> Advanced (2000 points)</li>
+        <li><strong>B-Class:</strong> Expert (3000 points)</li>
+        <li><strong>A-Class:</strong> Master (4000 points)</li>
+        <li><strong>S-Class:</strong> Legendary (5000 points)</li>
+      </ul>
+
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">Inventory System</h3>
+      <ul>
+        <li>50 item slots maximum</li>
+        <li>4 rarity levels: Common, Rare, Epic, Legendary</li>
+        <li>Equip items for stat bonuses</li>
+        <li>Use potions to gain XP</li>
+        <li>Search and filter items</li>
+      </ul>
+
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">Quest System</h3>
+      <ul>
+        <li>Track active quests</li>
+        <li>Difficulty levels: Easy, Medium, Hard</li>
+        <li>Earn XP and rank points</li>
+        <li>Daily quests available</li>
+      </ul>
+    </div>
+
+    <!-- Developer Features Section -->
+    <div class="guide-section">
+      <h2>👨‍💻 Developer Features</h2>
+      
+      <h3 style="color: var(--primary-light); margin-top: 1rem;">Console Commands</h3>
+      <p>Open browser console (F12) and use these commands:</p>
+      <div class="code-block">
+Hunter.init()      // Initialize example data<br>
+Hunter.log()       // Log all stored data<br>
+Hunter.clear()     // Clear all data<br>
+Hunter.export()    // Export data as JSON<br>
+Hunter.inventory() // View example inventory
+      </div>
+
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">Local Storage Data</h3>
+      <p>All data is stored in browser's localStorage:</p>
+      <ul>
+        <li><code>users</code> - Array of all registered users</li>
+        <li><code>currentUser</code> - Currently logged-in user</li>
+        <li><code>rememberEmail</code> - Last used email (optional)</li>
+      </ul>
+    </div>
+
+    <!-- Customization Section -->
+    <div class="guide-section">
+      <h2>🎨 Customization</h2>
+      
+      <h3 style="color: var(--primary-light); margin-top: 1rem;">Change Colors</h3>
+      <p>Edit CSS variables in <code>css/style.css</code>:</p>
+      <div class="code-block">
+:root {<br>
+  --primary-color: #7c3aed;    /* Change this */<br>
+  --secondary-color: #0ea5e9;<br>
+  --bg-primary: #0f172a;<br>
+  --text-primary: #f1f5f9;<br>
+}
+      </div>
+
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">Modify Game Parameters</h3>
+      <p>Edit values in <code>js/dashboard.js</code>:</p>
+      <div class="code-block">
+const xpRequired = level * 100;   // XP per level<br>
+const maxInventory = 50;           // Inventory slots<br>
+const rankUpPoints = 1000;         // Points needed
+      </div>
+
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">Add New Features</h3>
+      <ul>
+        <li>Add new HTML pages (copy structure from existing pages)</li>
+        <li>Add JavaScript functions in appropriate JS files</li>
+        <li>Style new elements in <code>css/style.css</code></li>
+        <li>Update navigation in navbar and sidebar</li>
+      </ul>
+    </div>
+
+    <!-- Troubleshooting Section -->
+    <div class="guide-section">
+      <h2>🔧 Troubleshooting</h2>
+      
+      <h3 style="color: var(--primary-light); margin-top: 1rem;">Pages Not Loading</h3>
+      <ul>
+        <li>Check that all files are in correct folders</li>
+        <li>Open in a modern web browser</li>
+        <li>Check browser console for errors (F12)</li>
+      </ul>
+
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">Login Not Working</h3>
+      <ul>
+        <li>Make sure you registered first</li>
+        <li>Check email and password are correct</li>
+        <li>Clear browser cache if issues persist</li>
+        <li>Use console: <code>Hunter.log()</code> to debug</li>
+      </ul>
+
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">Data Lost After Refresh</h3>
+      <ul>
+        <li>Check if localStorage is enabled</li>
+        <li>Check browser privacy settings</li>
+        <li>Try different browser</li>
+        <li>Increase localStorage limit if needed</li>
+      </ul>
+
+      <h3 style="color: var(--primary-light); margin-top: 1.5rem;">Styling Issues</h3>
+      <ul>
+        <li>Hard refresh browser (Ctrl+F5)</li>
+        <li>Clear CSS cache</li>
+        <li>Check if style.css is loaded</li>
+        <li>Verify CSS file path is correct</li>
+      </ul>
+    </div>
+
+    <!-- Tips & Tricks Section -->
+    <div class="guide-section">
+      <h2>💡 Tips & Tricks</h2>
+      <ul>
+        <li>✅ Use "Remember Me" to save your email on login</li>
+        <li>✅ Complete daily quests for consistent rewards</li>
+        <li>✅ Use inventory filters to find items quickly</li>
+        <li>✅ Check leaderboard to see where you rank</li>
+        <li>✅ Mobile-friendly: Works great on phones!</li>
+        <li>✅ Open DevTools (F12) for debugging</li>
+        <li>✅ Use Hunter.log() to see all stored data</li>
+        <li>✅ Try Hunter.clear() to start fresh (loses all data)</li>
+      </ul>
+    </div>
+
+    <!-- Links Section -->
+    <div class="guide-section">
+      <h2>🔗 Quick Links</h2>
+      <div class="btn-container">
+        <a href="index.html" class="btn btn-primary">Go to Landing Page</a>
+        <a href="register.html" class="btn btn-secondary">Register New Account</a>
+        <a href="login.html" class="btn btn-ghost">Go to Login</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding: 2rem; color: var(--text-tertiary);">
+      <p>&copy; 2026 Hunter System | All rights reserved</p>
+      <p>Crafted with passion for anime enthusiasts</p>
+    </div>
+  </div>
+</body>
+</html>
